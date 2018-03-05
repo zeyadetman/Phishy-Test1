@@ -1,0 +1,20 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  width: 40%;
+  margin: 30 auto;
+}
+.login p {
+  display: flex;
+  justify-content: center;
+}
+.login p label {
+  margin: 0 10 0 0;
+  width: 80px;
+}
+.login button {
+  width: 30%;
+  padding: 5px;
+  margin: 5px auto;
+}

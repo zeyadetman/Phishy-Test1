@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.mainer {
+  width: 55%;
+  border: 1px solid #000;
+  margin: 1em;
+}
+.sidemenu {
+  width: 35%;
+  border: 1px solid #000;
+  margin: 1em;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+select#sort {
+  min-width: 100px;
+  height: 30px;
+}
+.hideoption {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+input[type=search] {
+  border: 1px solid #000;
+  background-color: #fff;
+  background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png");
+  background-position: 5px 5px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  width: 90%;
+  margin: 10px auto;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.avatar {
+  width: 80%;
+  height: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  min-height: 100px;
+}
+.Collaboratorprof {
+  text-align: center;
+  width: 40%;
+  padding: 2% 0 0 0;
+  float: left;
+  border: 1px solid #000;
+  margin: 2% 0 0 6%;
+}
+.Collaboratorlist {
+  overflow: scroll;
+  max-height: 100%;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+.article {
+  border: 1px solid #000;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.pending {
+  background-color: #e2b4b0;
+}
+.in-progress {
+  background-color: #fcf6b5;
+}
+.published {
+  color: #000;
+  background: repeating-linear-gradient(135deg, #fff, #add8e6 10px, #fff 10px, #add8e6 10px);
+}
+.articles {
+  overflow: scroll;
+  max-height: 123%;
+  overflow-x: hidden;
+}

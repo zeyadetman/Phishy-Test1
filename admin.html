@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Phishy - Admin Dashboard</title>
+        <link href="css/admin.css" rel="stylesheet">
+        <script>
+            if(localStorage["usertype"] == 'collaborator') {window.location.href = "/collaborator"}
+            else if(localStorage.length == 0) {window.location.href = "/"}
+        </script>
+    </head>
+
+    <body>
+        <a href="#" onclick="localStorage.clear(); location.reload();">LogOut</a>
+        <div class="mainer">
+            <div class="header">
+                <h3 style="margin: 5px;">Articles</h3>
+                <select name="sort" id="sortarticles" style="width: 30%">
+                    <option selected disabled class="hideoption">Sort</option>
+                    <option id="articlename">Sort by Title</option>
+                    <option id="authorname">Sort by Sumbit date</option>
+                </select>
+            </div>
+            <div class="articles">
+            </div>
+        </div>
+        <div class="sidemenu">
+            <div class="header">
+                <h3 style="margin: 5px;">Collaborator</h3>
+                <select name="sort" id="collsort" style="width: 30%">
+                    <option selected disabled class="hideoption">Sort</option>
+                    <option id="collaboratorname">Sort by name</option>
+                </select>
+            </div>
+            <div class="content">
+                <input type="search" id="collsearch" name="search" placeholder="Search Collaborator here ...">
+                <div class="Collaboratorlist">
+                </div>
+            </div>
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="js/admin.js"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <link href="css/login.css" rel="stylesheet">
+        <script>
+            if(localStorage.length > 0 && localStorage.getItem('path').length !=0) {window.location.href = localStorage.getItem('path');}
+        
+        </script>
+    </head>
+
+    <body>
+        <div class="login">
+            <p><label>User Name</label>
+            <input type="text" class="username" required></p>
+            
+            <p><label>Password</label>
+            <input type="password" class="password" required></p>
+
+            <p class="errorMessage" style="display: none; text-align: center;"> </p>
+
+            <button type="button" onclick="login()">Sign In</button>
+        </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+flexuion(justifier, dirVar)
+    display flex
+    justify-content justifier
+    flex-direction dirVar
+$borderDefault = 1px solid black
+body
+    flexuion(normal, column)
+    width 80%
+    margin 20px auto
+
+    .articles
+        margin 40 0 0 0
+        display grid
+        grid-template-columns 1fr 1fr 1fr 1fr
+        grid-column-gap 10px
+        grid-row-gap 10px
+
+        .article
+            padding 5px
+            border $borderDefault
+
+.navbar
+    flexuion(space-between,row)
+
+input[type=search]
+    border $borderDefault
+    background-color white
+    background-image url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png')
+    background-position 2px 1px
+    background-size 25px
+    background-repeat no-repeat
+    padding 5px 0px 7px 40px
+    width 30%
+    float left
+
+.header
+    margin-top 30px
+    flexuion(space-between,row)
+    .hideoption
+        display none
+        visibility hidden
+        height 0
+        font-size 0
+
+.pending
+    background-color #e2b4b0
+
+.in-progress
+    background-color #fcf6b5
+
+.published
+    color black
+    background repeating-linear-gradient( 135deg, white, lightblue 10px, white 10px, lightblue 10px )
+
+.draft
+    background-color #ccc

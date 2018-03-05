@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: normal;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+}
+body .articles {
+  margin: 40 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+body .articles .article {
+  padding: 5px;
+  border: 1px solid #000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+input[type=search] {
+  border: 1px solid #000;
+  background-color: #fff;
+  background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png");
+  background-position: 2px 1px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  padding: 5px 0px 7px 40px;
+  width: 30%;
+  float: left;
+}
+.header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.header .hideoption {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+.pending {
+  background-color: #e2b4b0;
+}
+.in-progress {
+  background-color: #fcf6b5;
+}
+.published {
+  color: #000;
+  background: repeating-linear-gradient(135deg, #fff, #add8e6 10px, #fff 10px, #add8e6 10px);
+}
+.draft {
+  background-color: #ccc;
+}
