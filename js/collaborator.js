@@ -5,6 +5,7 @@ xhr.withCredentials = true;
 
 xhr.addEventListener("readystatechange", function () {
   if (this.readyState === 4) {
+      console.log(this.responseText);
     var articles = JSON.parse(this.responseText)["articles"];
     console.log(articles);
     for(var i=0;i<articles.length;i++){
@@ -68,6 +69,14 @@ xhr.send(data);
 $('#collsearch').keyup(()=>{
     var input = document.getElementById('collsearch').value.toUpperCase();
     var divs = $("div.article");
+    divs.filter((ind)=>{
+        let a = divs[ind].getElementsByTagName("h2")[0].innerHTML;
+        if (a.toUpperCase().indexOf(input) === -1)
+            divs[ind].style.display = "none";
+        else
+            divs[ind].style.display = "";
+    });
+    /*
     for (i = 0; i < divs.length; i++) {
         a = divs[i].getElementsByTagName("h2")[0].innerHTML;
         if (a.toUpperCase().indexOf(input) > -1) {
@@ -75,7 +84,7 @@ $('#collsearch').keyup(()=>{
         } else {
             divs[i].style.display = "none";
         }
-    }
+    }*/
 })
 /**
  * Finish Search section
